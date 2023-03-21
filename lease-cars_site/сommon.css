@@ -1,0 +1,73 @@
+@font-face {
+	font-family: "Inter regular";
+	src: local("Inter regular"),
+				url("fonts/Inter-Regular.woff2"), format("woff2"),
+				url("fonts/Inter-Regular.woff"), format("woff"),
+				url("fonts/Inter-Regular.ttf"), format("ttf"),
+				url("fonts/Inter-Regular.eot"), format("eot");
+}
+@font-face {
+	font-family: "Inter bold";
+	src: local("Inter regular"),
+				url("fonts/Inter-Bold.woff2"), format("woff2"),
+				url("fonts/Inter-Bold.woff"), format("woff"),
+				url("fonts/Inter-Bold.ttf"), format("ttf"),
+				url("fonts/Inter-Bold.eot"), format("eot");
+}
+html{
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+	box-sizing: inherit;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+h1,p,h2,h3,h4,span,ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+body{
+	font-family: "Inter regular", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #151515;
+	line-height: 1.3;
+}
+.container{
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+/*ready elements*/
+.main-title{
+	font-weight: 700;
+	font-size: 48px;
+}
+.bold-text{
+	font-weight: 700;
+	font-size: 1.5em;
+}
+.btn{
+	background-color: #151515;
+	color: #ffff;
+	font-weight: 700;
+	cursor: pointer;
+	border: none;
+	padding: 13px 61px;
+}
+.btn:hover{
+	transform: translate(2px, -2px);
+	transition: 0.5s;
+}
+.btn:not(:hover){
+	transform: none;
+	transition: 0.5s;
+}
+/**ready elements**/

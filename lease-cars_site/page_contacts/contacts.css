@@ -1,0 +1,38 @@
+/* conacts-us */
+.header{
+	background-color: #151515;
+}
+.contact-us{
+	text-align: center;
+	padding-top: 240px;
+}
+.bold-text{
+	margin-top: 20px;
+}
+.contact-us__form{
+	display: flex;
+	flex-direction: column;
+	margin: 50px auto;
+	max-width: 580px;
+}
+.contact-us__input-inner{
+	display: flex;
+	justify-content: space-between;
+}
+.contact-us__input{
+	min-width: 270px;
+	height: 57px;
+	padding: 18px 20px;
+	border: 1px solid #0066FF;
+}
+.contact-us__textarea{
+	margin-top: 50px;
+	max-width: 580px;
+	 height: 290px;
+	padding: 28px 20px;
+	border: 1px solid #0066FF;
+}
+.contact-us__btn{
+	margin: 50px auto;
+	max-width: 185px;
+}

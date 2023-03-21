@@ -1,0 +1,38 @@
+/*header*/
+.header{
+	width: 100%;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	transition: background-color 0.3s ease-in-out;
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+	margin: 40px 0 45px;
+}
+.nav__logo-link:hover{
+	transform: translate(2px, -2px);
+	transition: 0.5s;
+}
+.nav__logo-link:not(:hover){
+	transform: none;
+	transition: 0.5s;
+}
+.menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 35px;
+	font-weight: 700;
+	color: #fff;
+}
+.menu__item:hover{
+	color: #0066FF;
+	transition: color 0.15s ease-in-out;
+}
+.menu__item:not(:hover){
+	transition: color 0.15s ease-in-out;
+}
+/**header**/

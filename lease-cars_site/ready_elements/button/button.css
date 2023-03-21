@@ -1,0 +1,10 @@
+/*Кнопка - готовый элемент*/
+.btn{
+	font-size: 2.25em;
+	padding: 23px 112.5px;
+	background-color: #151515;
+	color: #ffff;
+	font-weight: 700;
+	cursor: pointer;
+}
+/**Кнопка - готовый элемент**/

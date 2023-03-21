@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="../normalize.css" type="text/css">
+	<link rel="stylesheet" href="../сommon.css" type="text/css">
+	<link rel="stylesheet" href="contacts.css" type="text/css">
+
+	<link rel="stylesheet" href="../ready_elements/header/header.css" type="text/css">
+	<link rel="stylesheet" href="../ready_elements/articles/articles.css" type="text/css">
+	<link rel="stylesheet" href="../ready_elements/footer/footer.css" type="text/css">
+
+	<script defer src="../ready_elements/articles/articles.js"></script>
+	<script defer src="../ready_elements/sending/sending.js"></script>
+
+	<title>contact us</title>
+</head>
+<body onload="lineHiddenArticles()">
+	<header class="header">
+		<div class="container">
+			<nav class="nav">
+				<a class="nav__logo-link" href="../page_index/index.html" target="_blank">
+					<img src="../common_images/logo.svg" alt="" class="class="nav__logo-img">
+				</a>
+				<ul class="menu">
+					<li class="menu__item"><a href="../page_catalog/catalog.html" class="menu__link" target="_blank">NEW CARS</a></li>
+					<li class="menu__item"><a href="" class="menu__link">PRE-OWNED CARS</a></li>
+					<li class="menu__item"><a href="" class="menu__link">FINANCE</a></li>
+					<li class="menu__item"><a href="" class="menu__link">LEASE VS BUY</a></li>
+					<li class="menu__item"><a href="contacts.html" class="menu__link">CONTACT US</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="main">
+		<section class="contact-us">
+			<div class="container">
+				<h2 class="contact-us__title main-title">
+					Contact Us
+				</h2>
+				<p class="contact-us__sub-title bold-text">
+					Feel free to contact us with questions, potencial partnerships or media inquiries
+				</p>
+				<form action="#" class="contact-us__form">
+					<div class="contact-us__input-inner">
+						<input type="text" id="name" name="name" maxlength="30"
+						autocomplete="on" required
+						class="contact-us__input contact-us__input-name" placeholder="Name">
+						<input type="email" id="email" name="email" maxlength="30" 
+						class="contact-us__input contact-us__input-email" autocomplete="on"
+						placeholder="E-mail" required>
+					</div>
+					<textarea name="" id="" cols="30" rows="10" class="contact-us__textarea" 
+					 placeholder="Your text"></textarea>
+					<button class="contact-us__btn btn" onclick="sendForm()">SUBMIT</button>
+				</form>
+			</div> 
+		</section>
+
+		<section class="articles">
+			<div class="container">
+				<div class="articles-inner"> 
+					<div class="articles-line">
+						<article class="article">
+							<img src="../ready_elements/articles/images/article1.jpg" alt="" class="aritcle__img">
+							<div class="article-inner"> 
+								<h4 class="article__title">An easier way to buy your next Toyota</h4>
+								<a class="article__btn">more</a>
+							</div>
+						</article>
+						<article class="article">
+							<img src="../ready_elements/articles/images/article2.jpg" alt="" class="aritcle__img">
+							<div class="article-inner"> 
+								<h4 class="article__title">A Guide to Road-Tripping With Pets</h4>
+								<a class="article__btn">more</a>
+							</div>
+						</article>
+					</div>
+					<div class="articles-line">
+						<article class="article">
+							<img src="../ready_elements/articles/images/article1.jpg" alt="" class="aritcle__img">
+							<div class="article-inner"> 
+								<h4 class="article__title">An easier way to buy your next Toyota</h4>
+								<a class="article__btn">more</a>
+							</div>
+						</article>
+						<article class="article">
+							<img src="../ready_elements/articles/images/article2.jpg" alt="" class="aritcle__img">
+							<div class="article-inner"> 
+								<h4 class="article__title">A Guide to Road-Tripping With Pets</h4>
+								<a class="article__btn">more</a>
+							</div>
+						</article>
+					</div>
+				</div>
+				<button class="articles__btn-show btn" onclick="articlesShowMore()">SHOW MORE</button>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__menu">
+				<ul class="footer__menu-links">
+					<li class="footer__menu-title">Products</li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">Used</a></li>
+					<li class="footer__menu-item"><a href="../page_catalog/catalog.html" class="footer__menu-link" target="_blank">New</a></li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">Sell your car</a></li>
+				</ul>
+				<ul class="footer__menu-links">
+					<li class="footer__menu-title">Resources</li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">Blog</a></li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">FAQ</a></li>
+					<li class="footer__menu-item"><a href="../page_contacts/contacts.html" class="footer__menu-link"  target="_blank">Contact us</a></li>
+				</ul>
+				<ul class="footer__menu-links">
+					<li class="footer__menu-title">Work With TrueCar</li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">Dealers</a></li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">Partners</a></li>
+				</ul>
+				<ul class="footer__menu-links">
+					<li class="footer__menu-title">About</li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">About us</a></li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">Team</a></li>
+					<li class="footer__menu-item"><a href="" class="footer__menu-link">Careers</a></li>
+				</ul>
+			</div>
+			<div class="footer__download">
+				<a href="" class="footer__download-link">
+					<img src="../common_images/app-store.svg" alt="" class="footer__download-img">
+				</a>
+				<a href="" class="footer__download-link"
+				><img src="../common_images/google-play.svg" alt="" class="footer__download-img">
+				</a>
+			</div>
+			<p class="footer__text">For questions about the TrueCar Auto Buying Service please call 1-888-878-3227.<br>
+				Certified Dealers are contractually obligated by TrueCar to meet certain customer 
+				service requirements and complete the TrueCar Dealer 
+													<br> Certification Program. <br>
+				TrueCar does not broker, sell, or lease motor vehicles. Unless otherwise noted, 
+				all vehicles shown on this website are offered for sale by <br> licensed motor vehicle 
+				dealers. All vehicles are subject to prior sale. By accessing this website, 
+				you agree to the TrueCar Terms of Service and <br> Privacy Policy.</p>
+				<div class="footer__bottom-links">
+					<a href="" class="footer__bottom-link">Terms of Service</a>
+					<a href="" class="footer__bottom-link">Privacy Policy</a>
+					<a href="" class="footer__bottom-link">Do Not Sell My Personal Information</a>
+				</div>
+		</div>
+	</footer>
+
+</body>
+</html>

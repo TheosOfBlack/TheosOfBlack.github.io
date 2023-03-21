@@ -1,0 +1,159 @@
+/*slider*/
+.slider{
+	min-height: 100vh;
+	background-image: url("images/slider1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	text-align: center;
+	transition: background-image 0.5s ease-in-out;
+}
+.slider__title{
+	color: #ffff;
+	padding-top: 170px;
+	font-size: 6em;
+	line-height: 0.93;
+}
+.slider__btn{
+	margin-top: 30px;
+	display: inline-block;
+	padding: 23px 112.5px;
+	font-size: 2.25em;
+}
+.slider__numbers{
+	margin: 310px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 570px;
+}
+.slider__number{
+	background-color: #000000;
+	height: 3px;
+	width: 120px;
+	transition: 0.5s ease-in-out;
+}
+.slider__number-active{
+	height: 6px;
+	background-color: #fff;
+	transition: 0.5s ease-in-out;
+}
+/**slider**/
+/*why lease*/
+.why-lease{
+	margin-top: 150px;
+	text-align: center;
+}
+.why-lease__items {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+.why-lease__item {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.why-lease__item-img {
+	margin: 0 60px 30px 60px;
+}
+.why-lease__item-title {
+	margin-bottom: 30px;
+}
+.why-lease__item-text {
+	text-align: left;
+}
+/**why lease**/
+/*how work*/
+.how-work{
+	margin-top: 150px;
+	text-align: center;
+}
+.how-work__text-inner{
+	max-width: 580px;
+	margin: 0 auto;
+}
+.how-work__text {
+	margin-top: 50px;
+	text-align: left;
+}
+.how-work__rules-title {
+	margin-top: 50px;
+	text-align: left;
+}
+.how-work__items{
+	margin-top: 50px;
+	max-width: 510px;
+	margin: 0 auto;
+}
+.how-work__rules-item {
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.how-work__item-number {
+	border-radius: 50%;
+	padding: 21px 38px;
+	background-color: #0066FF;
+	color: #fff;
+	font-weight: 700;
+	font-size: 3em;
+	width: 100px;
+	height: 100px;
+}
+.how-work__item-text {
+	max-width: 270px;
+	text-align: left;
+}
+.how-work__contract-text {
+	margin-top: 80px;
+	text-align: left;
+}
+/**how work**/
+/*welcome*/
+.welcome{
+	margin-top: 140px;
+	text-align: center;
+}
+.welcome__second-title{
+	margin-top: 20px;
+}
+.welcome__video{
+	margin-top: 50px;
+}
+/**welcome**/
+/*important*/
+.important{
+	text-align: center;
+	margin-top: 150px;
+}
+.important__text-inner{
+	max-width: 580px;
+	margin: 0 auto;
+}
+.important__text{
+	margin-top: 20px;
+	text-align: left;
+}
+.important__items{
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	margin-top: 50px;
+}
+.important__item{
+	text-align: left;
+}
+.important__item-text{
+	margin-top: 20px;
+}
+/**important**/
+@media screen and (max-height: 670px) {
+  .slider__numbers{
+		margin-top: 190px;
+	}
+}
+@media screen and (max-width: 1220px){
+}
