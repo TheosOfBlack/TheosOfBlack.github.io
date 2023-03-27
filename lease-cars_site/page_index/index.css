@@ -1,12 +1,19 @@
 /*slider*/
 .slider{
-	min-height: 100vh;
+	height: 100vh;
 	background-image: url("images/slider1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom center;
 	text-align: center;
 	transition: background-image 0.5s ease-in-out;
+}
+.slider__items-inner{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 100vh;
+	align-items: center;
 }
 .slider__title{
 	color: #ffff;
@@ -21,7 +28,7 @@
 	font-size: 2.25em;
 }
 .slider__numbers{
-	margin: 310px auto;
+	padding-bottom: 30px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -40,36 +47,41 @@
 }
 /**slider**/
 /*why lease*/
-.why-lease{
-	margin-top: 150px;
+.why-lease,
+.how-work,
+.important,
+.welcome{
+	padding-top: 250px;
+	margin-top: -100px;
 	text-align: center;
 }
 .why-lease__items {
 	display: flex;
 	justify-content: space-between;
-	gap: 40px;
+	flex-wrap: wrap;
+	align-items: center;
 }
 .why-lease__item {
+	align-items: center;
 	margin-top: 50px;
+	width: 25%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 .why-lease__item-img {
 	margin: 0 60px 30px 60px;
+	width: 150px;
 }
 .why-lease__item-title {
 	margin-bottom: 30px;
 }
 .why-lease__item-text {
+	padding: 20px;
 	text-align: left;
 }
 /**why lease**/
 /*how work*/
-.how-work{
-	margin-top: 150px;
-	text-align: center;
-}
 .how-work__text-inner{
 	max-width: 580px;
 	margin: 0 auto;
@@ -113,10 +125,6 @@
 }
 /**how work**/
 /*welcome*/
-.welcome{
-	margin-top: 140px;
-	text-align: center;
-}
 .welcome__second-title{
 	margin-top: 20px;
 }
@@ -125,10 +133,6 @@
 }
 /**welcome**/
 /*important*/
-.important{
-	text-align: center;
-	margin-top: 150px;
-}
 .important__text-inner{
 	max-width: 580px;
 	margin: 0 auto;
@@ -140,20 +144,106 @@
 .important__items{
 	display: flex;
 	justify-content: space-between;
-	gap: 40px;
+	align-items: flex-start;
 	margin-top: 50px;
+	flex-wrap: wrap;
 }
 .important__item{
+	display: flex;
+	flex-direction: column;
 	text-align: left;
+	max-width: 270px;
+	height: 100%;
 }
 .important__item-text{
 	margin-top: 20px;
+	padding-right: 20px;
 }
 /**important**/
-@media screen and (max-height: 670px) {
-  .slider__numbers{
-		margin-top: 190px;
+@media screen and (max-width: 1200px){
+	.slider__title{
+		font-size: 4em;
+	}
+	.slider__btn{
+		font-size: 1.75em;
+		padding: 15px 70px;
+	}
+	.slider__numbers{
+		width: 300px;
+	}
+	.slider__number{
+		width: 60px;
+	}
+	.why-lease,
+	.important,
+	.how-work,
+	.welcome{
+		margin-top: 100px;
+	}
+	.why-lease__items{
+		align-items: flex-start;
+	}
+	.why-lease__item{
+		width: 50%;
+	}
+	.why-lease__item-img{
+		width: 50%;
+	}
+	.important__item-img{
+		width: 450px;
+	}
+	.important__item{
+		margin: 80px 20px 0 0 ;
+		max-width: 450px;
 	}
 }
-@media screen and (max-width: 1220px){
+@media screen and (max-width: 1000px) {
+	.welcome__video{
+		width: 100%;
+	}
+	.important__items{
+		flex-direction: column;
+		align-items: center;
+	}
+	.important__item{
+		max-width: 100%;
+		align-items: center;
+	}
+	.important__item-img{
+		width: 600px;
+	}
+}
+@media screen and (max-width: 650px) {
+	.slider__numbers{
+		width: 280px;
+	}
+	.slider__number{
+		width: 50px;
+	}
+	.why-lease__item{
+		width: 100%;
+	}
+	.why-lease__item-img{
+		width: 50%;
+	}
+	.welcome__video{
+		height: 300px;
+	}
+	.important__item-img{
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.slider__title{
+		font-size: 2.3em;
+	}
+	.slider__btn{
+		padding: 15px 48px;
+	}
+	.how-work__item-text{
+		padding-left: 30px;
+	}
+	.welcome__video{
+		height: 200px;
+	}
 }

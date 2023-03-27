@@ -13,26 +13,32 @@
 	<link rel="stylesheet" href="../ready_elements/articles/articles.css" type="text/css">
 	<link rel="stylesheet" href="../ready_elements/footer/footer.css" type="text/css">
 	
+	<script defer src="../ready_elements/header/header-burger.js"></script>
 	<script defer src="catalog.js"></script>
 	<script defer src="../ready_elements/articles/articles.js"></script>
 
 	<title>Catalog</title>
 </head>
-<body onload="lineHidden(); lineHiddenArticles();">
-	
+<body>
+
 	<header class="header">
 		<div class="container">
 			<nav class="nav">
-				<a class="nav__logo-link" href="../page_index/index.html">
-					<img src="../common_images/logo.svg" alt="" class="class="nav__logo-img">
+				<a class="nav__logo-link" href="../index.html" target="_blank">
+					<img src="../common_images/logo.svg" alt="" class="nav__logo-img">
 				</a>
 				<ul class="menu">
-					<li class="menu__item"><a href="../page_catalog/catalog.html" class="menu__link">NEW CARS</a></li>
-					<li class="menu__item"><a href="" class="menu__link">PRE-OWNED CARS</a></li>
-					<li class="menu__item"><a href="" class="menu__link">FINANCE</a></li>
-					<li class="menu__item"><a href="" class="menu__link">LEASE VS BUY</a></li>
+					<li class="menu__item"><a href="catalog.html" class="menu__link">NEW CARS</a></li>
+					<li class="menu__item"><a href="../index.html#why-lease" class="menu__link"  target="_blank">WHY LEASE</a></li>
+					<li class="menu__item"><a href="../index.html#how-work" class="menu__link"  target="_blank">HOW IT WORKS</a></li>
+					<li class="menu__item"><a href="../index.html#important" class="menu__link"  target="_blank">IMPORTANT THINGS</a></li>
 					<li class="menu__item"><a href="../page_contacts/contacts.html" class="menu__link" target="_blank">CONTACT US</a></li>
 				</ul>
+				<button class="menu__bureger" onclick="buregerClick()">
+					<span class="menu__line menu__line-1"></span>
+					<span class="menu__line menu__line-2"></span>
+					<span class="menu__line menu__line-3"></span>
+				</button>
 			</nav>
 		</div>
 	</header>
@@ -40,826 +46,683 @@
 	<main class="main">
 		
 		<section class="choose">
+			
 			<div class="container">
 				<h2 class="choose__title main-title">
 					Choose your car
 				</h2>
-				<div class="choose_btns">
+				<div class="choose__btns">
 					<button class="choose__btn choose__btn-1 choose__btn-active" onclick="chooseClick('Car')">Car and Minivan</button>
 					<button class="choose__btn choose__btn-2" onclick="chooseClick('Trucks')">Trucks</button>
 					<button class="choose__btn choose__btn-3" onclick="chooseClick('Cross')">Crossovers & SUVs</button>
 					<button class="choose__btn choose__btn-4" onclick="chooseClick('Electr')">Electrified</button>
 				</div>
 				<div class="choose__items choose__items-car choose__items-active">
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars1.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars2.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars3.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Prius 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars4.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Hyundai Kona 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$510/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars1.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$650/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars5.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Ford Explorer 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$1,013/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars6.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Santa  Fe 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$739/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars7.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">KIA Niro 2023</h4>
-								<span class="choose__item-text">starting from $ 33600</span>
-								<span class="choose__item-price bold-text">$554/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars8.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Silverado</h4>
-								<span class="choose__item-text">starting from $ 62260</span>
-								<span class="choose__item-price bold-text">$1,032/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars2.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$450/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars3.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Prius 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars4.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Hyundai Kona 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$510/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars5.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Ford Explorer 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$1,013/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars6.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Santa  Fe 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$739/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars7.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">KIA Niro 2023</h4>
+							<span class="choose__item-text">starting from $ 33600</span>
+							<span class="choose__item-price bold-text">$554/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars8.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Chevrolet Silverado</h4>
+							<span class="choose__item-text">starting from $ 62260</span>
+							<span class="choose__item-price bold-text">$1,032/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
+							<span class="choose__item-text">starting from $ 35650</span>
+							<span class="choose__item-price bold-text">$591/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
+							<span class="choose__item-text">starting from $ 31885</span>
+							<span class="choose__item-price bold-text">$528/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
+							<span class="choose__item-text">starting from $ 28430</span>
+							<span class="choose__item-price bold-text">$471/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
+							<span class="choose__item-text">starting from $ 60000</span>
+							<span class="choose__item-price bold-text">$997/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$650/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$450/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+
+
+
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+
 				</div>
 
 				<div class="choose__items choose__items-trucks choose__items-hidden">
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars1.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars2.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars3.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Prius 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars4.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Hyundai Kona 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$510/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars1.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$650/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars5.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Ford Explorer 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$1,013/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars6.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Santa  Fe 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$739/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars7.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">KIA Niro 2023</h4>
-								<span class="choose__item-text">starting from $ 33600</span>
-								<span class="choose__item-price bold-text">$554/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars8.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Silverado</h4>
-								<span class="choose__item-text">starting from $ 62260</span>
-								<span class="choose__item-price bold-text">$1,032/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars2.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$450/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars3.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Prius 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars4.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Hyundai Kona 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$510/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars5.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Ford Explorer 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$1,013/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars6.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Santa  Fe 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$739/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars7.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">KIA Niro 2023</h4>
+							<span class="choose__item-text">starting from $ 33600</span>
+							<span class="choose__item-price bold-text">$554/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars8.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Chevrolet Silverado</h4>
+							<span class="choose__item-text">starting from $ 62260</span>
+							<span class="choose__item-price bold-text">$1,032/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
+							<span class="choose__item-text">starting from $ 35650</span>
+							<span class="choose__item-price bold-text">$591/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
+							<span class="choose__item-text">starting from $ 31885</span>
+							<span class="choose__item-price bold-text">$528/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
+							<span class="choose__item-text">starting from $ 28430</span>
+							<span class="choose__item-price bold-text">$471/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
+							<span class="choose__item-text">starting from $ 60000</span>
+							<span class="choose__item-price bold-text">$997/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$650/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$450/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="choose__items choose__items-cross choose__items-hidden">
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars1.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars2.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars3.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Prius 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars4.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Hyundai Kona 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$510/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars1.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$650/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars5.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Ford Explorer 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$1,013/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars6.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Santa  Fe 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$739/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars7.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">KIA Niro 2023</h4>
-								<span class="choose__item-text">starting from $ 33600</span>
-								<span class="choose__item-price bold-text">$554/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars8.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Silverado</h4>
-								<span class="choose__item-text">starting from $ 62260</span>
-								<span class="choose__item-price bold-text">$1,032/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars2.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$450/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars3.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Prius 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars4.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Hyundai Kona 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$510/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars5.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Ford Explorer 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$1,013/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars6.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Santa  Fe 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$739/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars7.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">KIA Niro 2023</h4>
+							<span class="choose__item-text">starting from $ 33600</span>
+							<span class="choose__item-price bold-text">$554/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars8.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Chevrolet Silverado</h4>
+							<span class="choose__item-text">starting from $ 62260</span>
+							<span class="choose__item-price bold-text">$1,032/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
+							<span class="choose__item-text">starting from $ 35650</span>
+							<span class="choose__item-price bold-text">$591/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
+							<span class="choose__item-text">starting from $ 31885</span>
+							<span class="choose__item-price bold-text">$528/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
+							<span class="choose__item-text">starting from $ 28430</span>
+							<span class="choose__item-price bold-text">$471/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
+							<span class="choose__item-text">starting from $ 60000</span>
+							<span class="choose__item-price bold-text">$997/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$650/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$450/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="choose__items choose__items-electr choose__items-hidden">
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars1.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$650/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars2.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$450/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars3.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Toyota Prius 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$400/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars4.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner">
-								<h4 class="choose__item-title bold-text">Hyundai Kona 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$510/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars1.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$650/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars5.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Ford Explorer 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$1,013/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars6.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Santa  Fe 2023</h4>
-								<span class="choose__item-text">starting from $ 39900</span>
-								<span class="choose__item-price bold-text">$739/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars7.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">KIA Niro 2023</h4>
-								<span class="choose__item-text">starting from $ 33600</span>
-								<span class="choose__item-price bold-text">$554/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars8.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Silverado</h4>
-								<span class="choose__item-text">starting from $ 62260</span>
-								<span class="choose__item-price bold-text">$1,032/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars2.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$450/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars3.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Prius 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-
-
-
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars4.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Hyundai Kona 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$510/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars5.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Ford Explorer 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$1,013/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars6.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Santa  Fe 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$739/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars7.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">KIA Niro 2023</h4>
+							<span class="choose__item-text">starting from $ 33600</span>
+							<span class="choose__item-price bold-text">$554/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-					<div class="choose__items-line">
-						<div class="choose__item">
-							<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
-								<span class="choose__item-text">starting from $ 35650</span>
-								<span class="choose__item-price bold-text">$591/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
-								<span class="choose__item-text">starting from $ 31885</span>
-								<span class="choose__item-price bold-text">$528/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
-								<span class="choose__item-text">starting from $ 28430</span>
-								<span class="choose__item-price bold-text">$471/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
-						</div>
-						<div class="choose__item">
-							<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
-							<div class="choose__item-inner"> 
-								<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
-								<span class="choose__item-text">starting from $ 60000</span>
-								<span class="choose__item-price bold-text">$997/mo</span>
-								<a href="" class="choose__item-button">see details</a>
-							</div>
+					<div class="choose__item">
+						<img src="images/cars/cars8.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Chevrolet Silverado</h4>
+							<span class="choose__item-text">starting from $ 62260</span>
+							<span class="choose__item-price bold-text">$1,032/mo</span>
+							<a href="" class="choose__item-button">see details</a>
 						</div>
 					</div>
-
+					<div class="choose__item">
+						<img src="images/cars/cars9.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Honda CR-V 2023</h4>
+							<span class="choose__item-text">starting from $ 35650</span>
+							<span class="choose__item-price bold-text">$591/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars10.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Hyundai Tucson</h4>
+							<span class="choose__item-text">starting from $ 31885</span>
+							<span class="choose__item-price bold-text">$528/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars11.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Chevrolet Equinox </h4>
+							<span class="choose__item-text">starting from $ 28430</span>
+							<span class="choose__item-price bold-text">$471/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item">
+						<img src="images/cars/cars12.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Jeep Wrangler 2023</h4>
+							<span class="choose__item-text">starting from $ 60000</span>
+							<span class="choose__item-price bold-text">$997/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars13.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner"> 
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$650/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars14.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Toyota Crown 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$450/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
+					<div class="choose__item choose__item-hidden">
+						<img src="images/cars/cars15.jpg" alt="" class="choose__item-img">
+						<div class="choose__item-inner">
+							<h4 class="choose__item-title bold-text">Prius Prime 2023</h4>
+							<span class="choose__item-text">starting from $ 39900</span>
+							<span class="choose__item-price bold-text">$400/mo</span>
+							<a href="" class="choose__item-button">see details</a>
+						</div>
+					</div>
 				</div>
-
 				<button class="choose__btn-show btn" onclick="chooseShowMore()">SHOW MORE</button>
-
 			</div>
+
 		</section>
 
 		<section class="articles">
@@ -881,7 +744,7 @@
 							</div>
 						</article>
 					</div>
-					<div class="articles-line">
+					<div class="articles-line articles__line-hidden">
 						<article class="article">
 							<img src="../ready_elements/articles/images/article1.jpg" alt="" class="aritcle__img">
 							<div class="article-inner"> 
@@ -897,9 +760,10 @@
 							</div>
 						</article>
 					</div>
+					<button class="articles__btn-show btn" onclick="articlesShowMore()">SHOW MORE</button>
 				</div>
-				<button class="articles__btn-show btn" onclick="articlesShowMore()">SHOW MORE</button>
 			</div>
+
 		</section>
 
 	</main>
@@ -909,33 +773,33 @@
 			<div class="footer__menu">
 				<ul class="footer__menu-links">
 					<li class="footer__menu-title">Products</li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">Used</a></li>
-					<li class="footer__menu-item"><a href="../page_catalog/catalog.html" class="footer__menu-link" target="_blank">New</a></li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">Sell your car</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">Used</a></li>
+					<li class="footer__menu-item"><a href="catalog.html" class="footer__menu-link">New</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">Sell your car</a></li>
 				</ul>
 				<ul class="footer__menu-links">
 					<li class="footer__menu-title">Resources</li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">Blog</a></li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">FAQ</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">Blog</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">FAQ</a></li>
 					<li class="footer__menu-item"><a href="../page_contacts/contacts.html" class="footer__menu-link" target="_blank">Contact us</a></li>
 				</ul>
 				<ul class="footer__menu-links">
 					<li class="footer__menu-title">Work With TrueCar</li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">Dealers</a></li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">Partners</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">Dealers</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">Partners</a></li>
 				</ul>
 				<ul class="footer__menu-links">
 					<li class="footer__menu-title">About</li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">About us</a></li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">Team</a></li>
-					<li class="footer__menu-item"><a href="" class="footer__menu-link">Careers</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">About us</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">Team</a></li>
+					<li class="footer__menu-item"><a href="#" class="footer__menu-link">Careers</a></li>
 				</ul>
 			</div>
 			<div class="footer__download">
-				<a href="" class="footer__download-link">
+				<a href="#" class="footer__download-link">
 					<img src="../common_images/app-store.svg" alt="" class="footer__download-img">
 				</a>
-				<a href="" class="footer__download-link"
+				<a href="#" class="footer__download-link"
 				><img src="../common_images/google-play.svg" alt="" class="footer__download-img">
 				</a>
 			</div>

@@ -9,6 +9,8 @@ let itemsTrucks=document.querySelector(".choose__items-trucks");
 let itemsCross=document.querySelector(".choose__items-cross");
 let itemsElectr=document.querySelector(".choose__items-electr");
 
+let choosebtnShow = document.querySelector(".choose__btn-show");
+
 function chooseClick(n) {
 	if(n=="Car"){
 		// Анимация кнопок
@@ -19,6 +21,8 @@ function chooseClick(n) {
 		document.querySelector(".choose__items-active").classList.remove("choose__items-active");
 		itemsCar.classList.remove("choose__items-hidden");
 		itemsCar.classList.add("choose__items-active");
+
+		choosebtnShow.classList.remove("btn-show-disabled");
 	}
 	if(n=="Trucks"){
 		document.querySelector(".choose__btn-active").classList.remove("choose__btn-active");
@@ -28,6 +32,8 @@ function chooseClick(n) {
 		document.querySelector(".choose__items-active").classList.remove("choose__items-active");
 		itemsTrucks.classList.remove("choose__items-hidden");
 		itemsTrucks.classList.add("choose__items-active");
+
+		choosebtnShow.classList.remove("btn-show-disabled");
 	}
 	if(n=="Cross"){
 		document.querySelector(".choose__btn-active").classList.remove("choose__btn-active");
@@ -37,6 +43,8 @@ function chooseClick(n) {
 		document.querySelector(".choose__items-active").classList.remove("choose__items-active");
 		itemsCross.classList.remove("choose__items-hidden");
 		itemsCross.classList.add("choose__items-active");
+
+		choosebtnShow.classList.remove("btn-show-disabled");
 	}
 	if(n=="Electr"){
 		document.querySelector(".choose__btn-active").classList.remove("choose__btn-active");
@@ -46,41 +54,29 @@ function chooseClick(n) {
 		document.querySelector(".choose__items-active").classList.remove("choose__items-active");
 		itemsElectr.classList.remove("choose__items-hidden");
 		itemsElectr.classList.add("choose__items-active");
+
+		choosebtnShow.classList.remove("btn-show-disabled");
 	}
 }
 // Анимация отображения большего кол-во КАРТОЧЕК при нажатие на кнопку show more и их скрытие
-let maxLines = 3;
-let chooseButtons = document.querySelectorAll(".choose__btn");
-let choosebtnShow = document.querySelector(".choose__btn-show");
+let maxElementsVisible = 12;
 
-function lineHidden(){
-	let lines = document.querySelector(".choose__items-active").querySelectorAll(".choose__items-line");
-	let numbersLines = lines.length;
-	for(let i=maxLines;i<numbersLines;i++){
-		lines[i].classList.remove("choose__line-active");
-		lines[i].classList.add("choose__line-hidden");
-	}
-	choosebtnShow.classList.remove("btn-show-disabled");
-}
-for (let button of chooseButtons){
-	button.addEventListener("click", lineHidden);
-}
 function chooseShowMore(){
-	let hiddenLines = document.querySelectorAll(".choose__line-hidden");
-	let hiddenLinesLength = hiddenLines.length;
-	if(hiddenLinesLength>4){
-		for (let i=1;i<4;i++){
-			hiddenLines[i].classList.remove("choose__line-hidden");
-			hiddenLines[i].classList.add("choose__line-active");
-		}
-		if(i==hiddenLinesLength){
-			choosebtnShow.classList.add("btn-show-disabled");
-		}
-	} else {
-		for (let hiddenLine of hiddenLines) {
-			hiddenLine.classList.remove("choose__line-hidden");
-			hiddenLine.classList.add("choose__line-active");
-		}
+	let chooseItemsActive = document.querySelector(".choose__items-active");
+	let itemsHidden = chooseItemsActive.querySelectorAll(".choose__item-hidden");
+	let itemsHiddenLength = itemsHidden.length;
+
+	if(itemsHiddenLength==0){
 		choosebtnShow.classList.add("btn-show-disabled");
+		return;
+	}
+
+	if(itemsHiddenLength<maxElementsVisible){
+		maxElementsVisible=itemsHiddenLength;
+	}
+	
+	for(let i=0; i<maxElementsVisible;i++){
+		itemsHidden[i].classList.remove("choose__item-hidden");
+		itemsHidden[i].classList.add("choose__item-active");
 	}
 } 

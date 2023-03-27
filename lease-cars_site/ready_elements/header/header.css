@@ -1,16 +1,19 @@
 /*header*/
 .header{
-	width: 100%;
+	width: 101%;
 	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1;
-	transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.2s ease;
 }
 .nav{
 	display: flex;
 	justify-content: space-between;
 	margin: 40px 0 45px;
+}
+.nav__logo-link{
+	display: inline;
 }
 .nav__logo-link:hover{
 	transform: translate(2px, -2px);
@@ -34,5 +37,93 @@
 }
 .menu__item:not(:hover){
 	transition: color 0.15s ease-in-out;
+}
+/* burger */
+.menu__bureger{
+	display: none;
+}
+/**burger**/
+@media screen and (max-width: 1200px) {
+	.nav{
+		margin: 25px 0 30px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.menu{
+		position: relative;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		height: 0px;
+		width: 100%;
+		font-size: 1.5em;
+	}
+	.menu-active{
+		margin: 80px 0 0 10px;
+		height: 100%;
+	}
+	.menu__item{
+		overflow: hidden;
+		height: 0;
+	}
+	.menu__item-active{
+		padding-top: 40px;
+		overflow: visible;
+		border-bottom: 1px solid #ffffff;
+		height: 100%;
+		width: 100%;
+	}
+	/* Burger */
+	.menu__bureger{
+		padding-top: 11px;
+		border: none;
+		background-color: transparent;
+		width: 50px;
+		height: 47px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	.menu__line{
+		width: 42px;
+		height: 5px;
+		background-color: #fff;
+		border-radius: 5px;
+	}
+	.menu__line-1{
+		transform: none;
+		transform-origin: right;
+		transition: transform 0.4s ease;
+	}
+	.menu__line-2{
+		transition: height 0.04s ease;
+	}
+	.menu__line-3{
+		transform: none;
+		transform-origin: right;
+		transition: transform 0.4s ease;
+	}
+	.menu__line-1-active{
+		transform: rotate(-45deg);
+		transform-origin: right;
+		transition: transform 0.4s ease;
+	}
+	.menu__line-2-active{
+		height: 0;
+		overflow: hidden;
+		transition: height 0.04s ease;
+	}
+	.menu__line-3-active{
+		transform: rotate(45deg);
+		transform-origin: right;
+		transition: transform 0.4s ease;
+	}
+	/**Burger**/
+}
+@media screen and (max-width: 440px) {
+	.menu__item{
+		font-size: 0.8em;
+		padding-top: 8px;
+	}
 }
 /**header**/

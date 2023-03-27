@@ -1,7 +1,9 @@
-/* conacts-us */
+/* header */
 .header{
 	background-color: #151515;
 }
+/**header**/
+/* conacts-us */
 .contact-us{
 	text-align: center;
 	padding-top: 240px;
@@ -35,4 +37,12 @@
 .contact-us__btn{
 	margin: 50px auto;
 	max-width: 185px;
+}
+@media screen and (max-width:630px) {
+	.contact-us__input-inner{
+		flex-direction: column;
+	}
+	.contact-us__input{
+		margin-top: 50px;
+	}
 }

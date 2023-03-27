@@ -1,11 +1,3 @@
-button{
-	color: inherit;
-	font-size: inherit;
-	background-color: transparent;
-	border: none;	
-	padding: 0;
-	cursor: pointer;
-}
 /*header*/
 .header{
 	background-color: #151515;
@@ -20,10 +12,11 @@ button{
 .choose__title{
 	margin-bottom: 50px;
 }
-.choose_btns{
+.choose__btns{
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	max-width: 800px;
 }
 .choose__btn,
@@ -38,44 +31,13 @@ button{
 	color: #0066FF;
 	transition: color 0.15s ease-in-out;
 }
-
-/*Видимость нужных карточек товара*/
-.choose__items-hidden{
-	position: absolute;
-	height: 0;
-	opacity: 0;
-	overflow: hidden;
-	transition: opacity 1s ease;
-}
-.choose__items-active{
-	height: 100%;
-	opacity: 1;
-	overflow: visible;
-	transition: opacity 1s ease;
-}
-/**Видимость нужных карточек товара по классу**/
-.choose__items-line{
+.choose__items{
 	display: flex;
 	justify-content: space-between;
-	gap: 40px;
-	margin-bottom: 100px;
+	flex-wrap: wrap;
 }
-/* Видимость нужного кол-во карточек */
-.choose__line-hidden{
-	height: 0;
-	opacity: 0;
-	overflow: hidden;
-	margin: 0;
-}
-.choose__line-active{
-	height: 350px;
-	opacity: 1;
-	overflow: visible;
-	transition: opacity 1.7s ease, height 0.5s ease;
-}
-/**Видимость нужного кол-во карточек**/
 .choose__item{
-	max-width: 270px;
+	margin: 100px 10px;
 }
 .choose__item-inner{
 	margin-top: -5px;
@@ -83,7 +45,6 @@ button{
 	flex-direction: column;
 	border: 1px solid #0066FF;
 	border-top: none;
-	border-collapse: collapse;
 }
 .choose__item-title{
 	margin-top: 20px;
@@ -98,4 +59,62 @@ button{
 	border-top: 1px solid #0066FF;
 	padding: 4px 20.5px;
 }
+/*Видимость нужных карточек товара*/
+.choose__items-hidden{
+	position: absolute;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 1s ease;
+}
+.choose__items-active{
+	height: 100%;
+	opacity: 1;
+	overflow: visible;
+	transition: opacity 1s ease;
+}
+.choose__item-hidden{
+	margin: 0;
+	height: 0;
+	width: 290px;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 1s ease, height 0.4s ease;
+}
+.choose__item-active{
+	opacity: 1;
+	height: 364px;
+	overflow: visible;
+	transition: opacity 1s ease, height 0.4s ease;
+}
+/**Видимость нужного кол-во карточек**/
 /**choose**/
+@media screen and (max-width: 1200px) {
+	.choose__btn{
+		width: 35%;
+	}
+	.choose__items{
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 800px) {
+	.choose__item{
+		margin-top: 0;
+	}
+	.choose__item-img{
+		width: 350px;
+	}
+	.choose__btns{
+		flex-direction: column;
+		align-items: center;
+	}
+	.choose__btn{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.choose__item-img{
+		max-width: 100%;
+	}
+}
+

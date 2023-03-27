@@ -30,6 +30,14 @@ h1,p,h2,h3,h4,span,ul{
 	margin: 0;
 	padding: 0;
 }
+button{
+	color: inherit;
+	font-size: inherit;
+	background-color: transparent;
+	border: none;	
+	padding: 0;
+	cursor: pointer;
+}
 li{
 	list-style: none;
 }
@@ -48,7 +56,7 @@ body{
 /*ready elements*/
 .main-title{
 	font-weight: 700;
-	font-size: 48px;
+	font-size: 3em;
 }
 .bold-text{
 	font-weight: 700;
@@ -69,5 +77,23 @@ body{
 .btn:not(:hover){
 	transform: none;
 	transition: 0.5s;
+}
+/* Блокировка кнопки при окончание списка КАРТОЧЕК или СТАТЕЙ */
+.btn-show-disabled{
+	background-color: #727272;
+	transition: 0.5s;
+}
+@media screen and (max-width: 600px) {
+	.main__title{
+		font-size: 2em;
+	}
+}
+@media screen and (max-width: 500px) {
+	.main__title{
+		font-size: 2em;
+	}
+	.btn{
+		padding: 10px 40px;
+	}
 }
 /**ready elements**/
