@@ -2,14 +2,13 @@ const fullPath=window.location.pathname;
 const pathArray=fullPath.split('/');
 const fileName=pathArray[pathArray.length-1];
 
-function anchorScroll(anchorSelector) {
+function anchorScroll(anchorId) {
 
 	if(fileName!=='index.html'){
-		let anchorId=anchorSelector.substring(1,anchorSelector.length);
 		window.location.assign('../index.html#'+anchorId);
 	}
 	
-	let itemAnchor=document.querySelector(anchorSelector);
+	let itemAnchor=document.querySelector(anchorId);
 	let scrollHeight=(itemAnchor.offsetTop-140);
 
 	window.scroll({
