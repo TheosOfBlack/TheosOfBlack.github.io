@@ -14,12 +14,13 @@
 	<link rel="stylesheet" href="../ready_elements/footer/footer.css" type="text/css">
 
 	<script defer src="../ready_elements/header/header-burger.js"></script>
+	<script defer src="../ready_elements/header/header-anchors.js"></script>
 	<script defer src="../ready_elements/articles/articles.js"></script>
 	<script defer src="../ready_elements/sending/sending.js"></script>
 
 	<title>contact us</title>
 </head>
-<body onload="lineHiddenArticles()">
+<body>
 
 	<header class="header">
 		<div class="container">
@@ -28,10 +29,10 @@
 					<img src="../common_images/logo.svg" alt="" class="nav__logo-img">
 				</a>
 				<ul class="menu">
-					<li class="menu__item"><a href="../page_catalog/catalog.html" class="menu__link" target="_blank">NEW CARS</a></li>
-					<li class="menu__item"><a href="../index.html#why-lease" class="menu__link"  target="_blank">WHY LEASE</a></li>
-					<li class="menu__item"><a href="../index.html#how-work" class="menu__link"  target="_blank">HOW IT WORKS</a></li>
-					<li class="menu__item"><a href="../index.html#important" class="menu__link"  target="_blank">IMPORTANT THINGS</a></li>
+					<li class="menu__item"><a href="../page_catalog/catalog.html" class="menu__link menu__link-page" target="_blank">NEW CARS</a></li>
+					<li class="menu__item" onclick="anchorScroll('.why-lease')"><a class="menu__link">WHY LEASE</a></li>
+					<li class="menu__item" onclick="anchorScroll('.how-work')"><a class="menu__link">HOW IT WORKS</a></li>
+					<li class="menu__item"  onclick="anchorScroll('.important')"><a class="menu__link menu__link-page">IMPORTANT THINGS</a></li>
 					<li class="menu__item"><a href="contacts.html" class="menu__link">CONTACT US</a></li>
 				</ul>
 				<button class="menu__bureger" onclick="buregerClick()">

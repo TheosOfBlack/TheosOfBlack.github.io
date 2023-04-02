@@ -14,6 +14,7 @@
 
 	<script defer src="ready_elements/header/header-burger.js"></script>
 	<script defer src="ready_elements/slider/slider.js"></script>
+	<script defer src="ready_elements/header/header-anchors.js"></script>
 	<script defer src="ready_elements/header/header-blackout.js"></script>
 
 	<title>D&M</title>
@@ -27,11 +28,11 @@
 					<img src="common_images/logo.svg" alt="Logotype" class="nav__logo-img">
 				</a>
 				<ul class="menu">
-					<li class="menu__item"><a href="page_catalog/catalog.html" class="menu__link" target="_blank">NEW CARS</a></li>
-					<li class="menu__item"><a href="#why-lease" class="menu__link">WHY LEASE</a></li>
-					<li class="menu__item"><a href="#how-work" class="menu__link">HOW IT WORKS</a></li>
-					<li class="menu__item"><a href="#important" class="menu__link">IMPORTANT THINGS</a></li>
-					<li class="menu__item"><a href="page_contacts/contacts.html" class="menu__link" target="_blank">CONTACT US</a></li>
+					<li class="menu__item"><a href="page_catalog/catalog.html" class="menu__link menu__link-page" target="_blank">NEW CARS</a></li>
+					<li class="menu__item" onclick="anchorScroll('.why-lease')"><a class="menu__link">WHY LEASE</a></li>
+					<li class="menu__item" onclick="anchorScroll('.how-work')"><a class="menu__link">HOW IT WORKS</a></li>
+					<li class="menu__item"  onclick="anchorScroll('.important')"><a class="menu__link">IMPORTANT THINGS</a></li>
+					<li class="menu__item"><a href="page_contacts/contacts.html" class="menu__link menu__link-page" target="_blank">CONTACT US</a></li>
 				</ul>
 				<button class="menu__bureger" onclick="buregerClick()">
 					<span class="menu__line menu__line-1"></span>
@@ -136,11 +137,7 @@
 				<p class="welcome__second-title bold-text">
 					Find out how easy it is to lease from D&Ms
 				</p>
-				 <iframe class="welcome__video" width="1000" height="500" 
-				 src="https://www.youtube-nocookie.com/embed/SMqif7h8lRY?controls=0" 
-				 title="YouTube video player" allow="accelerometer; 
-				 autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-				 web-share" allowfullscreen></iframe>
+				<iframe class="welcome__video" src="https://vk.com/video_ext.php?oid=-37270467&id=162853731&hash=7e5763c77d425bfb" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
 			</div>
 		</section>
 
