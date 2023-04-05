@@ -31,15 +31,6 @@
 	font-weight: 700;
 	color: #fff;
 }
-.menu__link{
-	pointer-events: none;
-}
-.menu__link-page{
-	pointer-events: auto;
-}
-.menu__item{
-	cursor: pointer;
-}
 .menu__item:hover{
 	color: #0066FF;
 	transition: color 0.15s ease-in-out;

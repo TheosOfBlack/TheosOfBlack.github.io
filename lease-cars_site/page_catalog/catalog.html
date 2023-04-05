@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="../ready_elements/footer/footer.css" type="text/css">
 	
 	<script defer src="../ready_elements/header/header-burger.js"></script>
-	<script defer src="../ready_elements/header/header-anchors.js"></script>
 	<script defer src="catalog.js"></script>
 	<script defer src="../ready_elements/articles/articles.js"></script>
 
@@ -30,9 +29,9 @@
 				</a>
 				<ul class="menu">
 					<li class="menu__item"><a href="catalog.html" class="menu__link menu__link-page">NEW CARS</a></li>
-					<li class="menu__item" onclick="anchorScroll('.why-lease')"><a class="menu__link">WHY LEASE</a></li>
-					<li class="menu__item" onclick="anchorScroll('.how-work')"><a class="menu__link">HOW IT WORKS</a></li>
-					<li class="menu__item"  onclick="anchorScroll('.important')"><a class="menu__link">IMPORTANT THINGS</a></li>
+					<li class="menu__item"><a onclick="headerScroll()" href="../index.html#why-lease" class="menu__link">WHY LEASE</a></li>
+					<li class="menu__item"><a onclick="headerScroll()" href="../index.html#how-work" class="menu__link">HOW IT WORKS</a></li>
+					<li class="menu__item"><a onclick="headerScroll()" href="../index.html#welcome"  class="menu__link">IMPORTANT THINGS</a></li>
 					<li class="menu__item"><a href="../page_contacts/contacts.html" class="menu__link menu__link-page" target="_blank">CONTACT US</a></li>
 				</ul>
 				<button class="menu__bureger" onclick="buregerClick()">
