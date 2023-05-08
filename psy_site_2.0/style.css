@@ -53,6 +53,7 @@ body{
 	background: linear-gradient(-90deg, #f9bd6e, #809d6d);
 	background-size: 200% 200%;
 	animation: gradient 4s ease-in-out infinite;
+	overflow-x: hidden;
 }
 .container{
 	max-width: 1220px;
@@ -646,10 +647,10 @@ body{
 	}
 	.header-line{
 		display: block;
-		width: 60px;
-		height: 7px;
+		width: 40px;
+		height: 5px;
 		background-color: #ffffff;
-		margin: 10px;
+		margin: 8px;
 		border-radius: 50px;
 	}
 	.btn-burger{
@@ -673,8 +674,8 @@ body{
 	}
 	.nav-active{
 		opacity: 1;
-		height: 701px;
-		transition: opacity 2.3s ease-in-out, height 0.4s ease-in-out;
+		height: 600px;
+		transition: opacity 3s ease-in-out, height 0.4s ease-in-out;
 	}
 	.header-inner-unactive{
 		width: 120px;
@@ -700,7 +701,7 @@ body{
 		transition: transform 0.4s ease-in-out;
 	}
 	.header-line-1-active{
-		transform: rotate(-27deg);
+		transform: rotate(-32deg);
 		transform-origin: right;
 		transition: transform 0.4s ease-in-out;
 	}
@@ -711,7 +712,7 @@ body{
 		transition: height 0.04s ease-in-out;
 	}
 	.header-line-3-active{
-		transform: rotate(27deg);
+		transform: rotate(32deg);
 		transform-origin: right;
 		transition: transform 0.4s ease-in-out;
 	}
