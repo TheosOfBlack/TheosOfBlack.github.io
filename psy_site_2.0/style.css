@@ -678,7 +678,7 @@ body{
 		transition: opacity 3s ease-in-out, height 0.4s ease-in-out;
 	}
 	.header-inner-unactive{
-		width: 120px;
+		width: 95px;
 		transition: width 0.4s ease-in-out;
 	}
 	.header-inner-active{
