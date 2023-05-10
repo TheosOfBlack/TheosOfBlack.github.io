@@ -771,6 +771,9 @@ body{
 	}
 }
 @media (max-width:440px){
+	.footer__contact-img{
+		height: 52px;
+	}
 	.first-page__img{
 		width: 100%;
 	}
