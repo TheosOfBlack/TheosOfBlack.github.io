@@ -602,6 +602,9 @@ body{
 	}
 }
 @media (max-width: 900px) {
+	.column-1{
+		padding-top: 10px;
+	}
 	.first-page-inner{
 		padding-top: 30px;
 	}
@@ -612,7 +615,7 @@ body{
 		width: 80%;
 	}
 	.slide{
-		width: 60%;
+		width: 60%; 
 	}
 	.form__area_problem{
 		width: 95%;
